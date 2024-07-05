@@ -1,0 +1,99 @@
+this is how we have take this eclipse maven project on git
+
+Microsoft Windows [Version 10.0.22631.3737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Eclipse\project-basic-selenium-java>git init
+Initialized empty Git repository in C:/Eclipse/project-basic-selenium-java/.git/
+
+C:\Eclipse\project-basic-selenium-java>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .classpath
+        .project
+        .settings/
+        output.txt
+        pom.xml
+        src/
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Eclipse\project-basic-selenium-java>git remote add origin https://github.com/test-architects/selenium-java-testng-maven-project.git
+
+C:\Eclipse\project-basic-selenium-java>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .classpath
+        .project
+        .settings/
+        output.txt
+        pom.xml
+        src/
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Eclipse\project-basic-selenium-java>git add .
+
+C:\Eclipse\project-basic-selenium-java>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .classpath
+        new file:   .project
+        new file:   .settings/org.eclipse.core.resources.prefs
+        new file:   .settings/org.eclipse.jdt.core.prefs
+        new file:   .settings/org.eclipse.m2e.core.prefs
+        new file:   output.txt
+        new file:   pom.xml
+        new file:   src/main/java/demo/company/project_basic_selenium_java/App.java
+        new file:   src/test/java/demo/company/project_basic_selenium_java/AppTest.java
+        new file:   target/classes/META-INF/MANIFEST.MF
+        new file:   target/classes/META-INF/maven/demo.company/project-basic-selenium-java/pom.properties
+        new file:   target/classes/META-INF/maven/demo.company/project-basic-selenium-java/pom.xml
+        new file:   target/classes/demo/company/project_basic_selenium_java/App.class
+        new file:   target/test-classes/demo/company/project_basic_selenium_java/AppTest.class
+
+
+C:\Eclipse\project-basic-selenium-java>git commit -m "Initial commit"
+[master (root-commit) 03b1718] Initial commit
+ 14 files changed, 274 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.core.resources.prefs
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .settings/org.eclipse.m2e.core.prefs
+ create mode 100644 output.txt
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/demo/company/project_basic_selenium_java/App.java
+ create mode 100644 src/test/java/demo/company/project_basic_selenium_java/AppTest.java
+ create mode 100644 target/classes/META-INF/MANIFEST.MF
+ create mode 100644 target/classes/META-INF/maven/demo.company/project-basic-selenium-java/pom.properties
+ create mode 100644 target/classes/META-INF/maven/demo.company/project-basic-selenium-java/pom.xml
+ create mode 100644 target/classes/demo/company/project_basic_selenium_java/App.class
+ create mode 100644 target/test-classes/demo/company/project_basic_selenium_java/AppTest.class
+
+C:\Eclipse\project-basic-selenium-java>git push -u origin master
+info: please complete authentication in your browser...
+fatal: unable to connect to cache daemon: Unknown error
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (40/40), 4.79 KiB | 233.00 KiB/s, done.
+Total 40 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/test-architects/selenium-java-testng-maven-project.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
