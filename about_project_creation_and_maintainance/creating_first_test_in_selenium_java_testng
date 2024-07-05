@@ -91,9 +91,9 @@ search "apache-poi" and collect the required dependency [helpful in reading writ
 
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 <dependency>
-		<groupId>org.apache.poi</groupId>
-		<artifactId>poi-ooxml</artifactId>
-		<version>5.2.5</version>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi-ooxml</artifactId>
+	<version>5.2.5</version>
 </dependency>
 
 add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
