@@ -1,6 +1,10 @@
+01>
 we do not need JUnit dependency so we have removed it
+-------------------------------------------------------------------------------------------------------------------------------
+02>
 we need TestNG dependencies and selenium dependencies, so we will download them from - https://mvnrepository.com/
-
+-------------------------------------------------------------------------------------------------------------------------------
+03>
 search TestNG and collect the latest dependency for my case today on 5th july it was - 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
@@ -10,4 +14,17 @@ search TestNG and collect the latest dependency for my case today on 5th july it
     <scope>test</scope>
 </dependency>
 
-add this in pom.xml
+add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
+-------------------------------------------------------------------------------------------------------------------------------
+04>
+search "selenium java" and collect the latest dependency, for my case today on 5th july it was -
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.22.0</version>
+</dependency>
+
+add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
+-------------------------------------------------------------------------------------------------------------------------------
