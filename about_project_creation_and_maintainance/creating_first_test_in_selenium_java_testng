@@ -28,3 +28,15 @@ search "selenium java" and collect the latest dependency, for my case today on 5
 
 add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
 -------------------------------------------------------------------------------------------------------------------------------
+05>
+search "ExtentReports" and collect the latest dependency
+
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version>
+</dependency>
+
+add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
+-------------------------------------------------------------------------------------------------------------------------------
