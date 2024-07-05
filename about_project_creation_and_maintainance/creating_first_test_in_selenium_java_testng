@@ -29,7 +29,7 @@ search "selenium java" and collect the latest dependency, for my case today on 5
 add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
 -------------------------------------------------------------------------------------------------------------------------------
 05>
-search "ExtentReports" and collect the latest dependency
+search "ExtentReports" and collect the latest dependency [help full in creating nice html reports of test execution]
 
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
@@ -41,7 +41,7 @@ search "ExtentReports" and collect the latest dependency
 add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
 -------------------------------------------------------------------------------------------------------------------------------
 06> 
-search "webdrivermanager" and collect the required dependency
+search "webdrivermanager" and collect the required dependency [helpful in setting up browser drivers and browser binaries]
 
 <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
@@ -52,3 +52,16 @@ search "webdrivermanager" and collect the required dependency
 
 add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
 -------------------------------------------------------------------------------------------------------------------------------
+07> 
+search "appium" and collect the required dependency [helpful in mobile app automation]
+
+<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+<dependency>
+    <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>9.2.2</version>
+</dependency>
+
+add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
+-------------------------------------------------------------------------------------------------------------------------------
+	 
