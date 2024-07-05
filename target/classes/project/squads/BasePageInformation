@@ -1,0 +1,20 @@
+BasePage will serve a first parent of all the pages 
+we will define all generic data members and member functions in this BasePage
+
+01) we have defined one BasePage and in this BasePage we have imported WebDriver from org.openqa.selenium.WebDriver;
+
+02) WebDriver is an interface provided by the Selenium library, 
+which defines methods for interacting with web browsers (e.g., opening pages, clicking elements, entering text, etc.).
+
+The driver variable is used to control a web browser instance. 
+Through the driver, you can navigate to URLs, find elements on web pages, perform actions (like clicks and form submissions), 
+and interact with the web application under test.
+
+The 'driver' represents a specific instance of a 'web browser' being controlled by Selenium. 
+For example, it could be an instance of ChromeDriver, FirefoxDriver, etc., depending on which browser you are automating.
+
+'WebDriver driver' is a variable that holds the instance of the 'web browser' being automated by Selenium.
+
+The WebDriver interface provides a comprehensive set of methods for browser automation, 
+enabling actions like navigating to URLs, interacting with web elements, managing cookies and windows, handling alerts, and more. 
+These methods are essential for writing robust and maintainable Selenium tests.
