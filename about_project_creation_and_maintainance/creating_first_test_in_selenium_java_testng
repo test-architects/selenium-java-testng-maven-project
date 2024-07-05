@@ -1,0 +1,13 @@
+we do not need JUnit dependency so we have removed it
+we need TestNG dependencies and selenium dependencies, so we will download them from - https://mvnrepository.com/
+
+search TestNG and collect the latest dependency for my case today on 5th july it was - 
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.2</version>
+    <scope>test</scope>
+</dependency>
+
+add this in pom.xml
