@@ -64,4 +64,18 @@ search "appium" and collect the required dependency [helpful in mobile app autom
 
 add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
 -------------------------------------------------------------------------------------------------------------------------------
+
+08> 
+search "rest-assured" and collect the required dependency [helpful in API automation]
+
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.4.0</version>
+    <scope>test</scope>
+</dependency>
+
+add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
+-------------------------------------------------------------------------------------------------------------------------------
 	 
