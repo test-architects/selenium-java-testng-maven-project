@@ -40,3 +40,15 @@ search "ExtentReports" and collect the latest dependency
 
 add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
 -------------------------------------------------------------------------------------------------------------------------------
+06> 
+search "webdrivermanager" and collect the required dependency
+
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.8.0</version>
+</dependency>
+
+add this in pom.xml and use CTRL+S to save the changes in pom.xml, automatically by using CTRL+S your pom.xml will be able to download the dependency from https://mvnrepository.com/ 
+-------------------------------------------------------------------------------------------------------------------------------
