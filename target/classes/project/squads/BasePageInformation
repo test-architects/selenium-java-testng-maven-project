@@ -18,3 +18,7 @@ For example, it could be an instance of ChromeDriver, FirefoxDriver, etc., depen
 The WebDriver interface provides a comprehensive set of methods for browser automation, 
 enabling actions like navigating to URLs, interacting with web elements, managing cookies and windows, handling alerts, and more. 
 These methods are essential for writing robust and maintainable Selenium tests.
+
+
+//we will add wait mechanism now
+//we have added thread.sleep() method for test and debug purpose
