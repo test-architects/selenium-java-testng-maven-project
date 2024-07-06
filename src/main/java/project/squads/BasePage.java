@@ -37,13 +37,15 @@ public class BasePage {
 
 	public void waitForElementToBeVisible(WebElement element, int waitForSeconds) {
 		// WebElement element = driver.findElement(By.xpath("")); such kind of elements
+		boolean isDisplayed = false;
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(waitForSeconds));
 			WebElement displayedWebelement = wait.until(ExpectedConditions.visibilityOf(element));
-			boolean isDisplayed = displayedWebelement.isDisplayed();
+			isDisplayed = displayedWebelement.isDisplayed();
 		} catch (NoSuchElementException e) {
 			System.out.println("web element : " + element + "is not displayed in " + waitForSeconds + " seconds");
 		}
+		System.out.println("is element : " + element + " displayed ? : " + isDisplayed);
 	}
 
 	public void waitForAlertToBeDisplayed(int waitForSeconds) {
@@ -54,5 +56,5 @@ public class BasePage {
 			// TODO: handle exception
 		}
 	}
-	
+
 }
