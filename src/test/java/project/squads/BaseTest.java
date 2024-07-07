@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-	String global_properties_file = "";
+	String global_properties_file = System.getProperty("user.dir") + "\\global_properties_file.properties";
 
 	protected ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<WebDriver>();
 	// its thread safe, webdriver instance will be unique for each test, it will
