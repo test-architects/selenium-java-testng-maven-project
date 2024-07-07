@@ -1,4 +1,4 @@
-package project.squads.admission.pages;
+package project.squads.admission.pages.loginpage;
 
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
