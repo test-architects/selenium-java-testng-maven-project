@@ -1,5 +1,9 @@
 package project.squads.admission.pages.loginpage;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -64,6 +68,20 @@ public class LoginPage extends BasePage {
 			flag = false;
 		}
 		return flag;
+	}
+
+	public void getURL() {
+
+		Properties prop = null;
+
+		try {
+			String file_path = System.getProperty("user.dir") + "\\global_properties_file.properties";
+			prop = new Properties();
+			prop.load(new FileInputStream(new File(file_path)));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		driver.get(prop.getProperty("url"));
 	}
 
 }

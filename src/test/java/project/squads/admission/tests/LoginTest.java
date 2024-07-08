@@ -16,6 +16,7 @@ public class LoginTest extends BaseTest {
 	public void setUp() {
 		setDriver();
 		lp = new LoginPage(getWebDriver());
+		lp.getURL();
 	}
 
 	@Test
