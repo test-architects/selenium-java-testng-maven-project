@@ -1,0 +1,5 @@
+# Ignore all files in the test-output directory
+test-output/*
+
+# But keep the test-output directory itself
+!test-output/
