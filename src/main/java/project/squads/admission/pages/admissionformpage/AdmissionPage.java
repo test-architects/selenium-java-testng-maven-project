@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import project.squads.BasePage;
+import project.squads.admission.pages.confirmationpage.ConfirmationPage;
 
 public class AdmissionPage extends BasePage {
 
@@ -115,5 +116,9 @@ public class AdmissionPage extends BasePage {
 	public void clickSubmitButton() {
 		waitForElementToBeVisible(submitButton, 4);
 		submitButton.click();
+	}
+
+	public ConfirmationPage GetConfirmationPage() {
+		return new ConfirmationPage(driver);
 	}
 }

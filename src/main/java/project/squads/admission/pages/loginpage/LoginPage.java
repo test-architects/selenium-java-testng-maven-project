@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import project.squads.BasePage;
+import project.squads.admission.pages.admissionformpage.AdmissionPage;
 
 public class LoginPage extends BasePage {
 
@@ -82,6 +83,10 @@ public class LoginPage extends BasePage {
 			// TODO: handle exception
 		}
 		driver.get(prop.getProperty("url"));
+	}
+
+	public AdmissionPage GetAdmissionPage() {
+		return new AdmissionPage(driver);
 	}
 
 }

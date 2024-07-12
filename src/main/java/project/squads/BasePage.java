@@ -17,7 +17,7 @@ public class BasePage {
 		this.driver = driverFromChildClass;
 	}
 
-	public static void hardWait(int n) {
+	public void hardWait(int n) {
 		try {
 			Thread.sleep(n);
 		} catch (Exception e) {
