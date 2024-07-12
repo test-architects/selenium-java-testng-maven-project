@@ -1,0 +1,1 @@
+adding testng.xml file we will add configuration details here

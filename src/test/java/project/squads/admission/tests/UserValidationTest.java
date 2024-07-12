@@ -12,11 +12,14 @@ import project.squads.admission.pages.loginpage.LoginPage;
 public class UserValidationTest extends BaseTest {
 
 	WebDriver driver;
+	LoginPage lp;
 
 	@BeforeClass
 	public void setUpWebBrowser() {
 		setDriver();
 		driver = getWebDriver();
+		lp = new LoginPage(driver);
+		lp.getURL();
 	}
 
 	@AfterClass
@@ -27,13 +30,11 @@ public class UserValidationTest extends BaseTest {
 	@Test(dataProvider = "invalidUsersList")
 	public void invalidUsersShouldNotLogin(String user, String pass) {
 
-		LoginPage lp = new LoginPage(driver);
-		lp.getURL();
 		lp.enterUsername(user);
 		lp.enterPassword(pass);
 		lp.clickLoginButton();
 		lp.acceptAlertIfUserCredentialsAreInvalid();
-		lp.hardWait(2000);
+		lp.hardWait(4000);
 	}
 
 	@DataProvider
