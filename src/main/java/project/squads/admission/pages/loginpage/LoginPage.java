@@ -84,7 +84,11 @@ public class LoginPage extends BasePage {
 		}
 		driver.get(prop.getProperty("url"));
 	}
-
+	
+	public void acceptAlertIfUserCredentialsAreInvalid() {
+		driver.switchTo().alert().accept();
+	}
+	
 	public AdmissionPage GetAdmissionPage() {
 		return new AdmissionPage(driver);
 	}
