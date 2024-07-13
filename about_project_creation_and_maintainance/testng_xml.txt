@@ -1,1 +1,71 @@
 adding testng.xml file we will add configuration details here
+======================================================================================================================
+
+<suite> tag is root tag it can not be duplicated, there is one and only one <suite> tag in single testng.xml file
+<suite> is basically your parent test suite like a domain name
+
+<test> you can have multiple <test> tags in your testng.xml file
+
+<classes> you can have only one classes tag in single test tag.
+
+<class> you can have multiple class tags in your classes tag
+
+<suite> single in unique testng.xml
+<test> multiple in suite tag
+<classes> single in unique test tag
+<class> multiple in unique classes tab which belongs to unique test tag
+======================================================================================================================
+
+
+when we want to run two test classes in parallel and then in series - 
+<test thread-count="2" name="Test" parallel="classes">
+at a time 2 browsers will open, once test is finished then other browser sessions will open
+
+<test thread-count="3" name="Test" parallel="classes">
+at a time 3 classes will be executed.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+	<test thread-count="3" name="Test" >
+		<classes>
+			<class name="project.squads.admission.tests.LoginTest" />
+			<class name="project.squads.admission.tests.UserValidationTest" />
+			<class name="project.squads.admission.tests.FormSubmissionTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
+======================================================================================================================
+
+
+<suite name="Suite" parallel="classes"> then gloabally, all classes will be executed in parallel whenever there is new test tag in picture
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="2" parallel="classes">
+	<test name="Test">
+		<classes>
+			<class name="project.squads.admission.tests.LoginTest" />         execution num 01
+			<class name="project.squads.admission.tests.UserValidationTest" />execution num 01
+			<class name="project.squads.admission.tests.FormSubmissionTest" />execution num 02
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Test2">
+		<classes>
+			<class name="project.squads.admission.tests.LoginTest" /> execution num 03
+			<class name="project.squads.admission.tests.UserValidationTest" />execution num 03
+			<class name="project.squads.admission.tests.FormSubmissionTest" />execution num 04
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+======================================================================================================================
+if you want to skip some test class entirely you can comment it like below
+
+<!-- <class name="project.squads.admission.tests.FormSubmissionTest" /> -->
+
+======================================================================================================================
+
