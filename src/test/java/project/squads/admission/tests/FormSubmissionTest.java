@@ -29,7 +29,7 @@ public class FormSubmissionTest extends BaseTest {
 		removeDriver();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, description = "login with valid username and password")
 	public void LoginValidUser() {
 		lp = new LoginPage(driver);
 		lp.getURL();
@@ -38,7 +38,7 @@ public class FormSubmissionTest extends BaseTest {
 		lp.clickLoginButton();
 	}
 
-	@Test(priority = 2, dependsOnMethods = { "LoginValidUser" })
+	@Test(priority = 2, dependsOnMethods = { "LoginValidUser" }, description = "submit the form")
 	public void FillFormAndSubmit() {
 		ap = lp.GetAdmissionPage();
 		ap.enterStudentName("John K meyors");
@@ -56,7 +56,7 @@ public class FormSubmissionTest extends BaseTest {
 		ap.hardWait(4000);
 	}
 
-	@Test(priority = 3, dependsOnMethods = "FillFormAndSubmit")
+	@Test(priority = 3, dependsOnMethods = "FillFormAndSubmit", description = "download the submitted form")
 	public void ValidateConfirmationPage() {
 		cp = ap.GetConfirmationPage();
 		cp.downloadSubmittedForm();
