@@ -1,1 +1,97 @@
 Test NG Annotations working
+
+
+========================================================================================================
+@BeforeSuite: The annotated method, will be executed before all tests in "this suite", 
+where "this suite" refers to a tag <suite> from testng.xml file, and
+where "all tests" refers to a tag <test> under <suite> tag under testng.xml
+
+from documentation - @BeforeSuite: The annotated method will be run before all tests in this <suite> have run.
+
+========================================================================================================
+@AfterSuite: The annotated method, will be executed after all tests in "this suite", 
+where "this suite" refers to a tag <suite> from testng.xml file, and 
+where "all tests" refers to a tag <test> under <suite> tag under testng.xml
+
+from documentation - @AfterSuite: The annotated method will be run after all tests in this <suite> have run.
+========================================================================================================
+@BeforeTest: The annotated method, will be executed before all <test> tags in "this suite", 
+where "this suite" refers to a tag <suite> from testng.xml file.
+
+from documentation - @BeforeTest: The annotated method will be run before any test method belonging to the classes inside the <test> tag is run.
+========================================================================================================
+@AfterTest: The annotated method, will be executed after all <test> tags in "this suite", 
+where "this suite" refers to a tag <suite> from testng.xml file.
+
+from documentation - @AfterTest: The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run.
+========================================================================================================
+@BeforeClass : @BeforeClass: The annotated method will be run before the first test method in the current test class is invoked.
+
+
+========================================================================================================
+@AfterClass: The annotated method will be run after all the test methods in the current test class have been run.
+ 
+ 
+========================================================================================================
+@BeforeMethod: The annotated method will be run before each test method in current test class.
+
+
+
+========================================================================================================
+@AfterMethod: The annotated method will be run after each test method in current test class
+
+
+========================================================================================================
+@BeforeGroups: The list of groups that this configuration method will run before. 
+This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.
+
+
+========================================================================================================
+@AfterGroups: The list of groups that this configuration method will run after. 
+This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked.
+ 
+ 
+========================================================================================================
+
+@Test - Marks a class or a method as part of the test. || we have never used this annotation with class.
+
+so, 
+
+@Test - Marks a method from a test class as part of the test.
+
+========================================================================================================
+
+@Test annotation Parameters
+
+	
+alwaysRun =(value can be true or false) - If set to true, this test method will always be run even if it depends on a method that failed.
+example - 
+@Test(alwaysRun = true)
+@Test(alwaysRun = false)
+
+If set to true, this test method will always be run even if it depends on a method that failed - so it directly deals with 
+if a annotated method with alwaysRun = true or alwaysRun = false is X, 
+and X is dependsOnMethod = Y,
+
+if Y failed and X(alwaysRun = true) then X will run irrespective of Y is failed.
+
+by default @Test(alwaysRun = false);
+
+========================================================================================================
+@Test(dependsOnGroups = { "smoke", "all" }) //[more than one group]
+
+@Test(dependsOnGroups = { "smoke"}) //[only one group]
+
+The list of groups this method depends on.
+
+========================================================================================================
+@Test(dependsOnMethods = { "testMethod01","testMethod02" }) //[more than one method]
+
+@Test(dependsOnMethods = { "testMethod01" }) //[only one method]
+
+
+The list of methods this method depends on.
+========================================================================================================
+
+
+ 
