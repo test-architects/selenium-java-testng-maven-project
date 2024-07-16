@@ -69,3 +69,11 @@ if you want to skip some test class entirely you can comment it like below
 
 ======================================================================================================================
 
+valid syntax for "dependsOnMethods"
+
+if your test dependent on multiple test methods
+@Test(dependsOnMethods = { "method01", "method02" })
+@Test(dependsOnMethods = "FillFormAndSubmit")
+
+
+======================================================================================================================

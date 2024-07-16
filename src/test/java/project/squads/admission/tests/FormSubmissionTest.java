@@ -38,7 +38,7 @@ public class FormSubmissionTest extends BaseTest {
 		lp.clickLoginButton();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, dependsOnMethods = { "LoginValidUser" })
 	public void FillFormAndSubmit() {
 		ap = lp.GetAdmissionPage();
 		ap.enterStudentName("John K meyors");
@@ -56,7 +56,7 @@ public class FormSubmissionTest extends BaseTest {
 		ap.hardWait(4000);
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, dependsOnMethods = "FillFormAndSubmit")
 	public void ValidateConfirmationPage() {
 		cp = ap.GetConfirmationPage();
 		cp.downloadSubmittedForm();
