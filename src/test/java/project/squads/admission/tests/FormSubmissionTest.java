@@ -38,7 +38,7 @@ public class FormSubmissionTest extends BaseTest {
 		lp.clickLoginButton();
 	}
 
-	@Test(priority = 2, dependsOnMethods = { "LoginValidUser" }, description = "submit the form")
+	@Test(priority = 2, dependsOnMethods = { "LoginValidUser", "DemoTest" }, description = "submit the form")
 	public void FillFormAndSubmit() {
 		ap = lp.GetAdmissionPage();
 		ap.enterStudentName("John K meyors");
@@ -61,6 +61,11 @@ public class FormSubmissionTest extends BaseTest {
 		cp = ap.GetConfirmationPage();
 		cp.downloadSubmittedForm();
 		cp.acceptAlert();
-		cp.hardWait(4000);
+		cp.hardWait(2000);
+	}
+
+	@Test(enabled = true)
+	public void DemoTest() {
+		System.out.println("demo test");
 	}
 }

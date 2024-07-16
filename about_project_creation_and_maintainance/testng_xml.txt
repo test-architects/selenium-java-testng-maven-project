@@ -75,5 +75,11 @@ if your test dependent on multiple test methods
 @Test(dependsOnMethods = { "method01", "method02" })
 @Test(dependsOnMethods = "FillFormAndSubmit")
 
+if @Test(dependsOnMethods = "NonExistingMethod") then entire class will not execute.
+so make sure you enter valid method name as value for the attribute dependsOnMethods.
+
+even if @Test(dependsOnMethods = ""), you put no value for the parameter then also your entire Test class will not execute,
+and you will get Runtime error related with TestNG
 
 ======================================================================================================================
+
