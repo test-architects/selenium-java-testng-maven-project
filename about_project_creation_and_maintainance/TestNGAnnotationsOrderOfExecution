@@ -1,0 +1,86 @@
+================================================================================================
+
+When you have one test classes specified in your testng.xml, 
+the @BeforeTest and @AfterTest annotations will execute once per test class.
+
+@BeforeSuite
+|
++-- @BeforeTest
+    |
+    +-- @BeforeClass
+        |
+        +-- @BeforeMethod (Test 1)
+        |     |
+        |     +-- @Test 1
+        |     |
+        |     +-- @AfterMethod (Test 1)
+        |
+        +-- @BeforeMethod (Test 2)
+        |     |
+        |     +-- @Test 2
+        |     |
+        |     +-- @AfterMethod (Test 2)
+        |
+        +-- @AfterClass
+    |
+    +-- @AfterTest
+|
++-- @AfterSuite
+
+
+================================================================================================
+
+When you have two test classes specified in your testng.xml, 
+the @BeforeTest and @AfterTest annotations will execute once per test class.
+
+@BeforeSuite
+|
++-- @BeforeTest (TestClass1)
+|   |
+|   +-- @BeforeClass (TestClass1)
+|       |
+|       +-- @BeforeMethod (Test 1 - TestClass1)
+|       |     |
+|       |     +-- @Test 1 - TestClass1
+|       |     |
+|       |     +-- @AfterMethod (Test 1 - TestClass1)
+|       |
+|       +-- @BeforeMethod (Test 2 - TestClass1)
+|       |     |
+|       |     +-- @Test 2 - TestClass1
+|       |     |
+|       |     +-- @AfterMethod (Test 2 - TestClass1)
+|       |
+|       +-- @AfterClass (TestClass1)
+|
++-- @AfterTest (TestClass1)
+|
++-- @BeforeTest (TestClass2)
+|   |
+|   +-- @BeforeClass (TestClass2)
+|       |
+|       +-- @BeforeMethod (Test 1 - TestClass2)
+|       |     |
+|       |     +-- @Test 1 - TestClass2
+|       |     |
+|       |     +-- @AfterMethod (Test 1 - TestClass2)
+|       |
+|       +-- @BeforeMethod (Test 2 - TestClass2)
+|       |     |
+|       |     +-- @Test 2 - TestClass2
+|       |     |
+|       |     +-- @AfterMethod (Test 2 - TestClass2)
+|       |
+|       +-- @AfterClass (TestClass2)
+|
++-- @AfterTest (TestClass2)
+|
++-- @AfterSuite
+
+================================================================================================
+
+@BeforeSuite, @AfterSuite, @BeforeTest, and @AfterTest are closely tied to the structure defined in testng.xml 
+and are used to manage setup and teardown operations at the suite and <test> levels in TestNG.
+
+================================================================================================
+
