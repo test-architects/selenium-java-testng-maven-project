@@ -45,7 +45,7 @@ public class BasePage {
 		} catch (NoSuchElementException e) {
 			System.out.println("web element : " + element + "is not displayed in " + waitForSeconds + " seconds");
 		}
-		System.out.println("is element : " + element + " displayed ? : " + isDisplayed);
+		//System.out.println("is element : " + element + " displayed ? : " + isDisplayed);
 	}
 
 	public void waitForAlertToBeDisplayed(int waitForSeconds) {
