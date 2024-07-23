@@ -71,7 +71,7 @@ public class LoginPage extends BasePage {
 		return flag;
 	}
 
-	public void getURL() {
+	public void getURL(String... x) {
 
 		Properties prop = null;
 
@@ -82,13 +82,17 @@ public class LoginPage extends BasePage {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		driver.get(prop.getProperty("url"));
+
+		String url = (x.length == 0) ? prop.getProperty("url") : x[0];
+
+		driver.get(url);
+		
 	}
-	
+
 	public void acceptAlertIfUserCredentialsAreInvalid() {
 		driver.switchTo().alert().accept();
 	}
-	
+
 	public AdmissionPage GetAdmissionPage() {
 		return new AdmissionPage(driver);
 	}
