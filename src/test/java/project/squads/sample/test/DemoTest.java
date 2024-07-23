@@ -19,7 +19,7 @@ public class DemoTest extends BaseTest {
 		driver = getWebDriver();
 	}
 
-	@Test
+	@Test(description = "this test is a basic TestNG Test")
 	public void getURL() {
 		driver.navigate().to("https://maheshgit9637.github.io/loginForm/login.html");
 	}

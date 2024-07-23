@@ -27,7 +27,7 @@ public class UserValidationTest extends BaseTest {
 		removeDriver();
 	}
 
-	@Test(dataProvider = "invalidUsersList")
+	@Test(dataProvider = "invalidUsersList", description = "if user and pass are invalid then we should get pop up")
 	public void invalidUsersShouldNotLogin(String user, String pass) {
 
 		lp.enterUsername(user);

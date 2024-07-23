@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
 		lp.getURL();
 	}
 
-	@Test
+	@Test(description = "Test if login is working fine")
 	public void LoginWithValidCredentials() {
 		lp.enterUsername("user");
 		lp.enterPassword("pass");
