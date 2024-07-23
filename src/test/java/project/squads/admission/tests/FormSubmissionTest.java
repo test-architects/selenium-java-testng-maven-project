@@ -3,12 +3,15 @@ package project.squads.admission.tests;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import project.squads.BaseTest;
 import project.squads.admission.pages.admissionformpage.AdmissionPage;
 import project.squads.admission.pages.confirmationpage.ConfirmationPage;
 import project.squads.admission.pages.loginpage.LoginPage;
+
+//@Ignore //if your test is failing then for debugging purpose you can skip this entire Test Class
 
 public class FormSubmissionTest extends BaseTest {
 
@@ -29,7 +32,7 @@ public class FormSubmissionTest extends BaseTest {
 		removeDriver();
 	}
 
-	@Test(priority = 1, description = "login with valid username and password")
+	@Test(priority = 1, description = "login with valid username and password", groups = { "smoke" })
 	public void LoginValidUser() {
 		lp = new LoginPage(driver);
 		lp.getURL();
@@ -38,7 +41,8 @@ public class FormSubmissionTest extends BaseTest {
 		lp.clickLoginButton();
 	}
 
-	@Test(priority = 2, dependsOnMethods = { "LoginValidUser", "DemoTest" }, description = "submit the form")
+	@Test(priority = 2, dependsOnMethods = { "LoginValidUser", "DemoTest" }, groups = { "smoke",
+			"regression" }, description = "submit the form")
 	public void FillFormAndSubmit() {
 		ap = lp.GetAdmissionPage();
 		ap.enterStudentName("John K meyors");
@@ -56,7 +60,8 @@ public class FormSubmissionTest extends BaseTest {
 		ap.hardWait(4000);
 	}
 
-	@Test(priority = 3, dependsOnMethods = "FillFormAndSubmit", description = "download the submitted form")
+	@Test(priority = 3, dependsOnMethods = "FillFormAndSubmit", groups = {
+			"smoke" }, description = "download the submitted form")
 	public void ValidateConfirmationPage() {
 		cp = ap.GetConfirmationPage();
 		cp.downloadSubmittedForm();
@@ -64,8 +69,13 @@ public class FormSubmissionTest extends BaseTest {
 		cp.hardWait(2000);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true) // (enabled = true) this method will not be skipped
 	public void DemoTest() {
 		System.out.println("demo test");
+	}
+
+	@Test(enabled = false) // (enabled = false) for skipping this @Test method
+	public void DemoTest2() {
+		System.out.println("demo test2");
 	}
 }
