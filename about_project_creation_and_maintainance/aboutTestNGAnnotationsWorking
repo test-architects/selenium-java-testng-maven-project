@@ -25,7 +25,7 @@ where "this suite" refers to a tag <suite> from testng.xml file.
 
 from documentation - @AfterTest: The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run.
 ========================================================================================================
-@BeforeClass : @BeforeClass: The annotated method will be run before the first test method in the current test class is invoked.
+@BeforeClass: The annotated method will be run before the first test method in the current test class is invoked.
 
 
 ========================================================================================================
@@ -57,7 +57,7 @@ This method is guaranteed to run shortly after the last test method that belongs
 
 so, 
 
-@Test - Marks a method from a test class as part of the test.
+@Test - Marks a method from a test class as part of the actual test.
 
 ========================================================================================================
 

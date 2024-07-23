@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="2" name="LoginVal">
+		<classes>
+			<class name="project.practice.test.ng.TestClass1" />
+			<class name="project.practice.test.ng.TestClass2" />
+			<class name="project.practice.test.ng.TestClass3" />
+			<class name="project.practice.test.ng.TestClass4" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
+
+
+<!-- when you write @BeforeClass annotation for method Demo, then test ng, 
+	will execute this method when class execution starts (usefull for setup activities) -->
+
+<!-- it will execute before all test in the Demo class; eg. if Demo class 
+	have 10 @Test Annotated methods then @before class wil execute prior to those 
+	10 methods -->
+
+<!-- when you write @AfterClass annotation for method Demo, then test ng 
+	will execute this method when class execution ends (usefull for tear down 
+	activities) -->
+
+<!-- after 10 methods have executed then only afterclass method will execute -->
+ 
