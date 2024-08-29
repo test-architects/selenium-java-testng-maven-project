@@ -1,6 +1,7 @@
 # Ignore all files in the test-output directory
 test-output/*
 target/
+reports/
 
 # But keep the test-output directory itself
 !test-output/

@@ -1,5 +1,6 @@
 package project.squads;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -60,6 +63,12 @@ public class BaseTest {
 			driver.quit();
 			threadLocalDriver.remove();
 		}
+	}
+
+	@BeforeSuite
+	public void BeforeSuiteFunctionalities() {
+
+		System.out.println("executing before suite functionalities");
 	}
 
 }
